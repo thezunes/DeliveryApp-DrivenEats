@@ -78,6 +78,7 @@ function liberarBotao(){
                 liberou.innerHTML = `Fechar Pedido`;
                 liberou.classList.add('finalizar')
                 liberouclick = 1;
+                document.getElementById("buybutton").disabled = false;
             }
         }
     }
@@ -93,11 +94,14 @@ function fecharPedido(){
 
     const precoTotal = foodprice + drinkprice + dessertprice;
 
-    const mensagemfinal = `Olá gostaria de fazer o pedido: \n - Prato: ${comidaSelecionada} \n - Bebida: ${BebidaSelecionada} \n - Sobremesa: ${sobremesaSelecionada}\n Total: R$ ${precoTotal} `
+    const precoTotalstr = precoTotal.toFixed(2).replace('.',',')
 
-    alert(mensagemfinal);
+
+
+    const mensagemfinal = `Olá gostaria de fazer o pedido: \n - Prato: ${comidaSelecionada} \n - Bebida: ${BebidaSelecionada} \n - Sobremesa: ${sobremesaSelecionada}\n Total: R$ ${precoTotalstr} `
+    console.log(precoTotalstr);
     const textcod = encodeURIComponent(mensagemfinal)
-    window.open(`https://wa.me/5521993260416?text=${textcod}`)
+    window.open(`https://wa.me/5521999999999?text=${textcod}`)
 
 }
 
