@@ -78,7 +78,7 @@ function liberarBotao(){
                 liberou.innerHTML = `Fechar Pedido`;
                 liberou.classList.add('finalizar')
                 liberouclick = 1;
-                document.getElementById("buybutton").disabled = false;
+                document.getElementsByClassName("botaoComprar").disabled = false;
             }
         }
     }
